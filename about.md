@@ -1,18 +1,14 @@
 ---
-title: Colophon
+title: about me
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt:
 comments: false
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+Hello, my name is Josh Knight and I am a data scientist in agriculture. I currently work in molecular plant breeding for a vegetable seeds company. This blog was an idea for me to help support and display gaps I find in vegetable agriculture and data science. I hope someone can find interest from this blog.
 
-If you have a question about him or else, just send a letter to him.
-
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
-
-**may u needs ✨**
+**Info if needed :)**
 
 - {{ site.author.email }}
 - github.com/{{ site.author.github }}
