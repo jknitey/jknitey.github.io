@@ -12,4 +12,4 @@ Hello, my name is Josh Knight and I am a data scientist in agriculture. I curren
 
 - {{ site.author.email }}
 - github.com/{{ site.author.github }}
-<a href="https://www.linkedin.com/in/josh-knight-1a13a7166/">LinkedIn</a>
+- <a href="https://www.linkedin.com/in/josh-knight-1a13a7166/">LinkedIn</a>
