@@ -14,10 +14,10 @@ author:
   bio: >- # tell to the world
     This is my blog space to display data science areas that I feel are lacking and should be addressed in vegetable agriculture but not limited to.
   username: username # general username
-  github: github_username # github username
-  twitter: twitter_username # twitter username
-  facebook: facebook_username # facebook username
-  email: your-email@email.com # email adress
+  github: jknitey # github username
+  #twitter: twitter_username # twitter username
+  #facebook: facebook_username # facebook username
+  email: joshknight2493@gmail.com # email adress
   avatar: /assets/img/avatar.jpg # change with your own avatar
 
 # URL settings
