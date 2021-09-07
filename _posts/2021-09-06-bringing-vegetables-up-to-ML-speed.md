@@ -21,7 +21,7 @@ After you have images annotated you can now start training a model following YOL
 
 Most likely if you just train a model to recognize a vegetable the best thing you can do is counting. 
 
-<img src="/assets/img/Count_Apples.png> 
+<img src="/assets/img/Count_Apples.png"> 
 
 However, if you standardize your images like take then all in the same environment and same camera distance, you can then compare image to image. Another option which is my favorite and most robust is getting your model to recognize your vegetable AND a standard like a coin or poker chip (see below). Then you can use this standard to normalize your images/vegetables which make your images and analysis very robust. This also allows you to get real measure guesstimates of your vegetables.
 
