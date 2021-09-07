@@ -1,7 +1,7 @@
 ---
 title: Bring Vegetables Up To ML Speed
 description: The method behind the madness
-—
+—--
 
 Digital phenotyping and machine learning (ML) have both become very hot topics over the past few years. Both of these topics have been very limited to either row crops like corn/wheat or something that has thousands of images, not like vegetables. I took on the challenge to see if ML could be an approach too high throughput digital phenotyping vegetables and this is my journey.
 
@@ -34,12 +34,15 @@ sports ball: 99%	(left_x:  135   top_y:   85   width:  493   height:  471)
 apple: 96%	(left_x:  655   top_y:  362   width: 1036   height:  867)
 ```
 
-I achieved this using R which is my main data analysis language but something like python can also be used. What I ended up doing was removing all data that was not useful and only keeping the width and height of the bounding boxes produced by YOLO. I then used some loops to cycle through each image to first count the vegetables in an image and then get the width and height of each vegetable in an image. Once you have the vegetable shape data you can normalize each one using you standard in the same image. I was then left with a bunch of vegetable data that I could then compare to each other across images. You can take this a step further and get areas and ratios per vegetable. Further analysis can be done to get things such as uniformity and then using ML, again, to get predictions of other traits. Below is a small example of image normalizing:
-
+I achieved this using R which is my main data analysis language but something like python can also be used. What I ended up doing was removing all data that was not useful and only keeping the width and height of the bounding boxes produced by YOLO. I then used some loops to cycle through each image to first count the vegetables in an image and then get the width and height of each vegetable in an image. Once you have the vegetable shape data you can normalize each one using you standard in the same image. I was then left with a bunch of vegetable data that I could then compare to each other across images. You can take this a step further and get areas and ratios per vegetable. Further analysis can be done to get things such as uniformity and then using ML, again, to get predictions of other traits. 
+                                          
+Below is a small example of image normalizing:
+```bash
 Cleaned data:
 sports ball: width:  493   height:  471
 apple: width: 1036   height:  867
 
 Baseballs have a diameter of about 7.4 cm. This means for the ball above in the image, every 65.14 pixels  is about 1 cm. (493+471)/2 = 482 avg pixel of image ball. Then 482/7.4 cm = 65.14. But remember this is only for this image and anything in this image! This normalization should be done for each image separately.
-
+```
+                                          
 Boom! You should now have a very robust high throughput digital phenotyping method you can use in your vegetable program! You can even take you ML model further and use it with videos but this takes much deeper analysis and planning.
