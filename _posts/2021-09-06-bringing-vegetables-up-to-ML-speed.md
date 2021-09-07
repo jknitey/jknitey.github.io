@@ -42,7 +42,7 @@ sports ball: width:  493   height:  471
 apple: width: 1036   height:  867
 ```
 
-Baseballs have a diameter of about 7.4 cm. This means for the ball above in the image, every 65.14 pixels  is about 1 cm. (493+471)/2 = 482 avg pixel of image ball. Then 482/7.4 cm = 65.14. But remember this is only for this image and anything in this image! This normalization should be done for each image separately.
+Baseballs have a diameter of about 7.4 cm. This means for the ball above in the image, every 65.14 pixels  is about 1 cm. (493+471)/2 = 482 avg pixel of image ball. Then 482/7.4 cm = 65.14. That means the hypothetical apple in the image is roughly 15.90 cm x 13.31 cm. But remember this is only for this image and anything in this image! This normalization should be done for each image separately.
 
-###### Boom! 
+##### Boom! 
 You should now have a very robust high throughput digital phenotyping method you can use in your vegetable program! You can even take you ML model further and use it with videos but this takes much deeper analysis and planning.
