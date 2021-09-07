@@ -1,7 +1,7 @@
 ---
 title: Bring Vegetables Up To ML Speed
 description: The method behind the madness
-—
+---
 
 Digital phenotyping and machine learning (ML) have both become very hot topics over the past few years. Both of these topics have been very limited to either row crops like corn/wheat or something that has thousands of images, not like vegetables. I took on the challenge to see if ML could be an approach too high throughput digital phenotyping vegetables and this is my journey.
 
