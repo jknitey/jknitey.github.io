@@ -19,11 +19,11 @@ Once you know which option above is for you, you can find a labeling tool that f
 
 After you have images annotated you can now start training a model following YOLO’s manual. You will need some GPUs for this training and something like Google Colab notebook can help if you don’t have access to GPU/TPUs. After many hours of model training you should have a ML model that you can begin to use for high throughout image phenotyping!
 
-Most likely if you just train a model to recognize a vegetable the best thing you can do is counting. 
+Most likely if you just train a model to recognize a vegetable the best thing you can do is counting (example below). 
 
 <img src="/assets/img/Count_Apples.png"> 
 
-However, if you standardize your images like take then all in the same environment and same camera distance, you can then compare image to image. Another option which is my favorite and most robust is getting your model to recognize your vegetable AND a standard like a coin or poker chip (see below). Then you can use this standard to normalize your images/vegetables which make your images and analysis very robust. This also allows you to get real measure guesstimates of your vegetables.
+However, if you standardize your images like take then all in the same environment and same camera distance, you can then compare image to image (not very robust). Another option which is my favorite and most robust is getting your model to recognize your vegetable AND a standard like a coin or poker chip (see below). Then you can use this standard to normalize your images/vegetables which make your images and analysis very robust. This also allows you to get real measure guesstimates of your vegetables. Below is an example of this by having your vegetable (apple) and the standard (ball) in the same image. You can then use the standards bounding box to get an estimated real mesurment of the vegetable.
 
 <img src="/assets/img/Annotated_Apple.png"> 
 
@@ -34,7 +34,7 @@ sports ball: 99%    (left_x:  135   top_y:   85   width:  493   height:  471)
 apple: 96%    (left_x:  655   top_y:  362   width: 1036   height:  867)
 ```
 
-I achieved this using R which is my main data analysis language but something like python can also be used. What I ended up doing was removing all data that was not useful and only keeping the width and height of the bounding boxes produced by YOLO. I then used some loops to cycle through each image to first count the vegetables in an image and then get the width and height of each vegetable in an image. Once you have the vegetable shape data you can normalize each one using you standard in the same image. I was then left with a bunch of vegetable data that I could then compare to each other across images. You can take this a step further and get areas and ratios per vegetable. Further analysis can be done to get things such as uniformity and then using ML, again, to get predictions of other traits. Below is a small example of image normalizing:
+I achieved this using R which is my main data analysis language but something like python can also be used. What I ended up doing was removing all data that was not useful and only keeping the width and height of the bounding boxes produced by YOLO. I then used some loops to cycle through each image to first count the vegetables in an image and then get the width and height of each vegetable in an image. Once you have the vegetable shape data you can normalize each one using your standard in the same image. I was then left with a bunch of vegetable data that I could then compare to each other across images. You can take this a step further and get areas and ratios per vegetable. Further analysis can be done to get things such as uniformity and then using ML again to get predictions of other traits. Below is a small example of image normalizing:
 
 ```
 Cleaned data:
@@ -44,5 +44,6 @@ apple: width: 1036   height:  867
 
 Baseballs have a diameter of about 7.4 cm. This means for the ball above in the image, every 65.14 pixels  is about 1 cm. (493+471)/2 = 482 avg pixel of image ball. Then 482/7.4 cm = 65.14. That means the hypothetical apple in the image is roughly 15.90 cm x 13.31 cm. But remember this is only for this image and anything in this image! This normalization should be done for each image separately.
 
-##### Boom! 
-You should now have a very robust high throughput digital phenotyping method you can use in your vegetable program! You can even take you ML model further and use it with videos but this takes much deeper analysis and planning.
+##### Finished!
+
+YOLO is a very helpful easy to use ML tool that anyone can learn to use. There are many free resources out there that can help someone achieve building an image recognition ML model. I hope the above can inspire others to explore image ML especially in vegetable agriculture. You can even take you ML models further and use it with videos but this takes much deeper analysis and planning.
