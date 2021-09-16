@@ -1,5 +1,5 @@
 ----
-title: Obtaining Field Variability with FIELDimageR [R]
+title: Obtaining Field Variability Data with FIELDimageR [R]
 ----
 
 There is no field that is created equal. This is why obtaining covariates such as field variations can be important factors in helping explain data. Field variations could include slope, soil, pests/disease, etc. Pretty much anything that can influence the performance of a crop and can help explain why something happened aka variation. Field Images have become more available with the use of drones. There is also companies that sell satellite images which then can be processes for what ever you want. In this example, I will go through a quick method to obtain field variants using an overhead image of a field obtained through Google Maps. Ideally we would get a real image via drones but google satellite images are adequate	. I will be showing a very easy to use R package designed for analyzing images from drones but has many other applications as well. This R package is called [FIELDimageR](https://www.opendronemap.org/fieldimager/). The example below does follow the packages example fairly close but tweaked to our example which is slightly more complex than the package example. 
