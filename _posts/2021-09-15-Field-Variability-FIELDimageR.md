@@ -84,7 +84,10 @@ imgIn.Info = fieldInfo(mosaic = imgIn.Indices,
 #View data of each field
 outData = imgIn.Info$fieldShape@data
 ````
+#### Field Variability
 <img src="/assets/img/Field_Img8.png">
+
+#### Average Color Index for Each Block
 <img src="/assets/img/Field_Img9.png">
 
 And there you have it! We have successfully extracted variability of a field or crop trial using an image that we can then use to account for variability in our experiments. FieldimageR is a really amazing package and I have to give so much thanks to the developer of the package because it really is an amazing simple tool for R that can process data from images. Good Job. FieldimageR can do so much more that just work on field images and I highly recommend any agriculture R user to explore this package for themself.
