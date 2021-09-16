@@ -49,8 +49,11 @@ imgIn.RemSoil = fieldMask(mosaic = imgIn.Rotated,
                          cropValue = 175, 
                          cropAbove = F)
 ````
+#### Testing indeces
 <img src="/assets/img/Field_Img4.png">
+#### Removing Soil/Background
 <img src="/assets/img/Field_Img5.png">
+#### End Result of Selected Fields
 <img src="/assets/img/Field_Img6.png">
 
 We now have our fields segments out and now we can divide our fields based on as many blocks as you want. For this example, I separated out each field and then blocked half of each field so we can try to capture as much variability as we can. You can use *fieldShape* to create these blocks in your image which then we can extract the average index data for each block.
