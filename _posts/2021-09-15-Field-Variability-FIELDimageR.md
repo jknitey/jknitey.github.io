@@ -49,10 +49,12 @@ imgIn.RemSoil = fieldMask(mosaic = imgIn.Rotated,
                          cropValue = 175, 
                          cropAbove = F)
 ````
-#### Testing indeces
+#### Testing Induces
 <img src="/assets/img/Field_Img4.png">
+
 #### Removing Soil/Background
 <img src="/assets/img/Field_Img5.png">
+
 #### End Result of Selected Fields
 <img src="/assets/img/Field_Img6.png">
 
