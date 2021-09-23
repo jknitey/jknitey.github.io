@@ -1,0 +1,5 @@
+---
+title: Using ML to Predict Berry Yield Using Agronomic Variables
+---
+
+<iframe src="https://www.kaggle.com/embed/joshknight/predicting-berry-yield-using-ml-r?kernelSessionId=75420218" height="800" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="Predicting Berry Yield Using ML [R]"></iframe>
