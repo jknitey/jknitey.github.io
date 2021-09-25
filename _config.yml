@@ -12,7 +12,7 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Josh Knight # author name
   bio: >- # tell to the world
-    This is my blog space to display data science areas lacking in vegetable agriculture but not limited to.
+    This is my place to display data science projects in agriculture but not limited to. Enjoy :)
   username: username # general username
   github: jknitey # github username
   #twitter: twitter_username # twitter username
