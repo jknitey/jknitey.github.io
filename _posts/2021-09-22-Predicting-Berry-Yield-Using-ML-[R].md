@@ -32,7 +32,7 @@ yield                  17 777 6012.85 1356.96 6107.38 6059.28 1417.36 1637.70 89
 
 #### Correlations of the variables
 
-<img src="/assets/img/Cor_Variables.PNG">
+<img src="/assets/img/Cor_Variables.png">
 
 There is some concerning data here. Variables fruitset, fruitmass, and seeds are very close to being yield. So using these variables to predict yield should be giving the models massive accuracy increases which is concerning, but we will proceed.
 
@@ -45,13 +45,13 @@ We will explore five different machine learning algorithms, random forest, GLM, 
 #### Model performance
 
 ##### Observed vs Predictions on Testing Data
-<img src="/assets/img/Pred_Plots_All_Var.PNG">
+<img src="/assets/img/Pred_Plots_All_Var.png">
 
 ##### RMSE of the models performance over multiple testings
-<img src="/assets/img/RMSE_All_Var.PNG">
+<img src="/assets/img/RMSE_All_Var.png">
 
 ##### Rsquare of the models performance over multiple testings
-<img src="/assets/img/Rsquar_All_Var.PNG">
+<img src="/assets/img/Rsquar_All_Var.png">
 
 #### Conclusion
 Looking at the performances of the models, lasso had the lowest RMSE and highest Rsquare values compared to the other models. This means that using our lasso model trained on this data would produce the best predictions for yield compared to the other models tested here and on this data. 
@@ -59,6 +59,6 @@ Looking at the performances of the models, lasso had the lowest RMSE and highest
 #### Observations and suggestions
 Looking at the trait variables that explained the most variance for lasso, we can see that fruitset explained the greatest variance for yield. 
 
-<img src="/assets/img/Lasso_Var_All.PNG">
+<img src="/assets/img/Lasso_Var_All.png">
 
 This was common across the other models as well. If we think about this, fruitset is nearly equal to berry yield. To think about this we can say if something is 90% good, this means it will be better than something that is 20% good. Also, fruitset, fruitmass, and seeds seem like traits that need to be physically taken which I think should be avoided to help save time and money. It would be interesting to see how taking these variables out of the data and just using the environmental data would influence the models… Overall these models performed way to good in my option and could be due to it is simulated data and pretty much yield (fruitset, fruitmass, and seeds) was given to the models. 
