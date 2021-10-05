@@ -4,7 +4,8 @@ title: Predicting Crop Recommendations Given Environmental Factors [python]
 Here we will explore a data set to predict which crop you should plant given specific environmental factors using python and scikit learn. The factors in the data include, nitrogen, phosphorus, potassium, temperature, humidity, pH, and rainfall. There is a total of 22 crops tested and include, lentil, maize, banana, papaya, chickpea,  kidneybeans, jute, cotton, apple, coffee, grapes, mango, rice, mungbean, watermelon, coconut, orange, muskmelon, pigeonpeas, blackgram, mothbeans, and pomegranate. We will look at the data and test a handful of machine learning classification models to see how well we can explain the data.
 
 #### Data Structure
-We can take a quick look at the data to see how it is structured.
+We can take a quick look at the data to see how it is structured. We can see the heading includes N, P, K, temperature, humidity ph, rainfall, and the label. Also, we can see the data consists of 2200 rows and 8 columns.
+
 ```
 	N	P	K	temperature	humidity	ph	rainfall	label
 0	90	42	43	20.879744	82.002744	6.502985	202.935536	rice
@@ -21,7 +22,7 @@ We can take a quick look at the data to see how it is structured.
 2200 rows × 8 columns
 ```
 
-Next, we want to check for na or zero values which looks like there are none in the data.
+Next, we want to check for na or zero values which we can see below there are none in the data.
 ```
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 2200 entries, 0 to 2199
@@ -39,7 +40,7 @@ Data columns (total 8 columns):
 dtypes: float64(4), int64(3), object(1)
 ```
 
-Taking a look at each crop, we can see that each crop has 100 entries and which crops are included in the data. This also shows us that the data will be balanced.
+Taking a look at each crop, we can see that each crop has 100 entries and which crops are included in the data. This also shows us that the data will be balanced per each crop.
 ```
 lentil         100
 maize          100
@@ -100,16 +101,16 @@ Tree
 Accuracy score: 0.98
 ```
 
- Below is a simple plot between the true test sample values and the BaysNa model prediction for each test sample. We can see that there looks like to be one or more values miss classified shown by the plotting deviation along the diagonal.
+ Below is a simple plot between the true test sample values and the BaysNa model predicted values for each test sample. We can see there is at least one or more values miss classified shown by the plotting deviation along the diagonal line.
 <img src="/assets/img/Class_Crop_Enviro1.png">
 
-We can count the miss classifications to see how well the model performed:
+We can count the miss classifications to see how well the Gaussian Naive Bayes model performed:
 ```Number of mislabeled points out of a total 440 points : 1```
 Using the testing data there was 1 miss classification which is super good!
 
-We can also plot the confusion matrix as a heat map which indicates the miss classified labels. We can see that the one miss classification was between jute and rice. However, overall amazing predictions but the BaysNa model.
+We can also plot the confusion matrix as a heat map which indicates the miss classified labels. We can see that the one miss classification was between jute and rice. However, overall amazing predictions but the Gaussian Naive Bayes model for this data.
 
 <img src="/assets/img/Class_Crop_Enviro2.png">
 
 #### Summary
-In summary, we explore predicting crop planting recommendations using environmental factors across seven different machine learning models. We found that using a Gaussian Naive Bayes model best predicted the data and this model could now be used to accurately provide crop recommendations give environmental factors!
+In summary, we explored predicting crop recommendations using environmental factors across seven different machine learning models. We found that using a Gaussian Naive Bayes model best predicted the data and this model could now be used to accurately provide crop recommendations give environmental factors!
