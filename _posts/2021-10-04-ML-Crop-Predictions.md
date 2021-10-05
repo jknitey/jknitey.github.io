@@ -1,6 +1,6 @@
-----
+---
 title: Predicting Crop Recommendations Given Environmental Factors [python]
-----
+---
 
 ```
 	N	P	K	temperature	humidity	ph	rainfall	label
