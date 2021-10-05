@@ -87,8 +87,9 @@ Accuracy score: 1.00
 Tree
 Accuracy score: 0.98
 ```
-
+<img src="/assets/img/Class_Crop_Enviro1.png">
 ```
 Number of mislabeled points out of a total 440 points : 1
 ```
+<img src="/assets/img/Class_Crop_Enviro2.png">
 
