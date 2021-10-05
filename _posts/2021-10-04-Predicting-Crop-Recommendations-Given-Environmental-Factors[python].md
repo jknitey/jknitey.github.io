@@ -104,7 +104,7 @@ Accuracy score: 0.98
 <img src="/assets/img/Class_Crop_Enviro1.png">
 
 We can count the miss classifications to see how well the model performed:
-Number of mislabeled points out of a total 440 points : 1
+```Number of mislabeled points out of a total 440 points : 1```
 Using the testing data there was 1 miss classification which is super good!
 
 We can also plot the confusion matrix as a heat map which indicates the miss classified labels. We can see that the one miss classification was between jute and rice. However, overall amazing predictions but the BaysNa model.
