@@ -1,7 +1,10 @@
 ---
 title: Predicting Crop Recommendations Given Environmental Factors [python]
 ---
+Here we will explore a data set to predict which crop you should plant given specific environmental factors using python and scikit learn. The factors in the data include, nitrogen, phosphorus, potassium, temperature, humidity, pH, and rainfall. There is a total of 22 crops tested and include, lentil, maize, banana, papaya, chickpea,  kidneybeans, jute, cotton, apple, coffee, grapes, mango, rice, mungbean, watermelon, coconut, orange, muskmelon, pigeonpeas, blackgram, mothbeans, and pomegranate. We will look at the data and test a handful of machine learning classification models to see how well we can explain the data.
 
+#### Data Structure
+We can take a quick look at the data to see how it is structured.
 ```
 	N	P	K	temperature	humidity	ph	rainfall	label
 0	90	42	43	20.879744	82.002744	6.502985	202.935536	rice
@@ -17,6 +20,8 @@ title: Predicting Crop Recommendations Given Environmental Factors [python]
 2199	104	18	30	23.603016	60.396475	6.779833	140.937041	coffee
 2200 rows × 8 columns
 ```
+
+Next, we want to check for na or zero values which looks like there are none in the data.
 ```
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 2200 entries, 0 to 2199
@@ -33,6 +38,8 @@ Data columns (total 8 columns):
  7   label        2200 non-null   object 
 dtypes: float64(4), int64(3), object(1)
 ```
+
+Taking a look at each crop, we can see that each crop has 100 entries and which crops are included in the data. This also shows us that the data will be balanced.
 ```
 lentil         100
 maize          100
@@ -59,6 +66,7 @@ pomegranate    100
 Name: label, dtype: int64
 ```
 
+To understand the variables we can simply write out how each variable is structured. This also can show us missing data and outliers or bad data. Looking over each variable, there do not seem to be any weird things happening. Ex. no extreme values in the data that look out of place.
 ```
 	N	P	K	temperature	humidity	ph	rainfall
 count	2200.000000	2200.000000	2200.000000	2200.000000	2200.000000	2200.000000	2200.000000
@@ -70,7 +78,11 @@ min	0.000000	5.000000	5.000000	8.825675	14.258040	3.504752	20.211267
 75%	84.250000	68.000000	49.000000	28.561654	89.948771	6.923643	124.267508
 max	140.000000	145.000000	205.000000	43.675493	99.981876	9.935091	298.560117
 ```
+#### Model Exploration
 
+Since we are trying to predict crops for a given environment, we want to look at classification models to explore. These models will suggest which crop should be planted in a given environment unlike a regression model which more or less predict values. We split the data using an 80/20 training/testing split which is fairly standard. We will look at the performance of seven models including, ridge regression (Ridge), Support Vector Classification (SVR), Stochastic Gradient Descent (SGDC), Nearest Neighbors (KNN), Gaussian Processes (GPC), Gaussian Naive Bayes (BaysNa), and Decision Trees (Tree). To evaluate and compare each model performance, we will use the [sklearn.metrics.accuracy_score]( https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score) which will give us a metric to find the best model.
+
+Running each model, we can see that the Gaussian Naive Bayes model had a “perfect” classification score followed by SVR, KNN, and Tree. This is quite good but we want to check this performance using some visual modeling.
 ```
 Ridge
 Accuracy score: 0.63
@@ -87,9 +99,17 @@ Accuracy score: 1.00
 Tree
 Accuracy score: 0.98
 ```
+
+ Below is a simple plot between the true test sample values and the BaysNa model prediction for each test sample. We can see that there looks like to be one or more values miss classified shown by the plotting deviation along the diagonal.
 <img src="/assets/img/Class_Crop_Enviro1.png">
 ```
+We can count the miss classifications to see how well the model performed:
 Number of mislabeled points out of a total 440 points : 1
+Using the testing data there was 1 miss classification which is super good!
+
+We can also plot the confusion matrix as a heat map which indicates the miss classified labels. We can see that the one miss classification was between jute and rice. However, overall amazing predictions but the BaysNa model.
 ```
 <img src="/assets/img/Class_Crop_Enviro2.png">
 
+#### Summary
+In summary, we explore predicting crop planting recommendations using environmental factors across seven different machine learning models. We found that using a Gaussian Naive Bayes model best predicted the data and this model could now be used to accurately provide crop recommendations give environmental factors!
