@@ -3,6 +3,8 @@ title: Predicting Crop Recommendations Given Environmental Factors [python]
 ---
 Here we will explore a data set to predict which crop you should plant given specific environmental factors using python and scikit learn. The factors in the data include, nitrogen, phosphorus, potassium, temperature, humidity, pH, and rainfall. There is a total of 22 crops tested and include, lentil, maize, banana, papaya, chickpea,  kidneybeans, jute, cotton, apple, coffee, grapes, mango, rice, mungbean, watermelon, coconut, orange, muskmelon, pigeonpeas, blackgram, mothbeans, and pomegranate. We will look at the data and test a handful of machine learning classification models to see how well we can explain the data.
 
+My [Kaggle](https://www.kaggle.com/joshknight/notebook195a732b98) of the code for this project.
+
 #### Data Structure
 We can take a quick look at the data to see how it is structured. We can see the heading includes N, P, K, temperature, humidity ph, rainfall, and the label. Also, we can see the data consists of 2200 rows and 8 columns.
 
